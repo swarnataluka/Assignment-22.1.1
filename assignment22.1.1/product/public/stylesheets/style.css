@@ -1,0 +1,87 @@
+a {
+  color: #FFFFFF;
+}
+
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #555555;
+}
+
+.container {
+  padding: 20px;
+  background-color: rosybrown;
+  width: 530px;
+  border-radius: 6px;
+  margin-left: 30%;
+  margin-right: 25%;
+  margin-top: 2%;
+}
+.container h4 a {
+  text-decoration: none;
+  padding: 1px 2px;
+  background-color: #777777;
+  border-radius: 6px;
+  color: #FFFFFF;
+}
+
+.container h4 a:hover, .container table tr td button:hover {
+  background-color: mistyrose;
+  color: #000000;
+}
+
+.container table {
+  width: 530px;
+}
+
+.container table tr td {
+  padding: 5px;
+}
+
+.container table tr td input, .container table tr td {
+  border: solid 1px rosybrown;
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: 50%;
+  color: #000000;
+}
+
+.container table tr td button {
+  border: solid 1px #777777;
+  background-color: #777777;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.container form button{
+  border: solid 1px #777777;
+  background-color: #777777;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.container .list-table {
+  width: 360px;
+  border: solid 2px rgb(241, 247, 155);
+  border-spacing: 0;
+}
+
+.container .list-table th {
+  border-bottom: solid 2px rgb(241, 247, 155);
+}
+.div1 {
+  text-align: center;
+  background-color: rosybrown;
+  padding-top: 2%;
+  margin-top: 2%;
+  margin-left: 30%;
+  margin-right: 32%;
+  height: 200px;
+  font-size: 16px;
+}

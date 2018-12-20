@@ -1,0 +1,75 @@
+<!-- including header content which is common for all pages -->
+<%- include ../layouts/header.ejs %>
+<table width='80%' border=0 class="ml">
+	<tr class="c">
+		<th>Name
+		</th>
+		<th>Price
+		</th>
+		<th>Description
+		</th>
+		<th>Color
+		</th>
+		<th>Category
+		</th>
+		<th>Brand
+		</th>
+		<th>Product status
+		</th>
+		<th>Action
+		</th>
+	</tr>
+<!-- Using foreach loop for the employee array -->
+	<% if(data) { %>
+	<% data.forEach(function(user){ %>
+	<tr>
+	</tr>
+	<tr>
+		<td><%= user.name %>
+		</td>
+		<td><%= user.price %>
+		</td>
+		<td><%= user.description %>
+		</td>
+		<td><%= user.color %>
+		</td>
+		<td><%= user.category %>
+		</td>
+		<td><%= user.brand %>
+		</td>
+		<td><%= user.product_status %>
+		</td>
+		<td>
+			<div style="float:left">
+				<a href='/users/edit/<%= user._id %>'>Edit</a>&nbsp;
+				<form method="post" action="/users/delete/<%= user._id %>" style="float:right">
+					<input type="submit" name="delete" value='Delete' onClick="return confirm('Are you sure you want to delete?')">
+					<input type="hidden" name="_method" value="DELETE">
+				</form>
+			</div>
+		</td>
+	</tr>	
+	<% }) %>
+	<% } %>
+</table>
+	<br>
+		<hr>
+			<br>
+				<% if(messages.error) { %>
+				<p class="rml"><%- messages.error %></p>
+				<% } %>
+				<% if(messages.success){ %>
+				<p class="gml"><%- messages.success %></p>
+				<% } %>
+			<br>
+		<hr>
+	<br>
+<p class="ml">Please press below the "Delete" button provided, to remove records that has product_status with "not available" status</p>
+<div class="ml">
+	<form method="post" action="/users/delete/<%= data.product_status %>">
+		<input type="submit" name="delete" value='Delete' onClick="return confirm('Are you sure you want to delete?')" class="mr">
+		<input type="hidden" name="_method" value="DELETE">
+	</form>
+</div>
+<!-- including footer content which is common to all pages -->
+<%- include ../layouts/footer.ejs %>

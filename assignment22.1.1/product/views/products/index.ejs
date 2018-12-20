@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product list</title>
+<!--In views/products folder all product CRUD user interface files are stored . All records are listed-->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h4><a href="/products/create">Create product</a></h4>
+      <h4>Product List</h4>
+      <% if(products.length>0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th>Product status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<products.length;i++) { %>
+            <tr>
+              <td><a href="/products/show/<%= products[i]._id%>"><%= products[i].name%></a></td>
+              <td><%= products[i].price%></td>
+              <td><%= products[i].description%></td>
+              <td><%= products[i].color%></td>
+              <td><%= products[i].category%></td>
+              <td><%= products[i].brand%></td>
+              <td><%= products[i].product_status%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No products found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

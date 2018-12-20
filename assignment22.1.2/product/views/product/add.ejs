@@ -1,0 +1,120 @@
+<!-- including header content which is common for all pages -->
+<%- include ../layouts/header.ejs %>
+<%if (messages.error){ %>
+	<p class="rml"><%- messages.error %></p>
+<% } %>
+<% if(messages.success){%>
+	<p class="gml"><%- messages.success %></p>
+<% } %>
+<form action="/users/add" method="post" name="form1"  class="ml1">
+	<table width="25%" border="0">
+		<tr class="c">
+				<th>Name</th>
+				<th>Price</th>
+				<th>Description</th>
+				<th>Color</th>
+				<th>Category</th>
+				<th>Brand</th>
+				<th>Product status</th>
+		</tr>
+		<tr>
+			<td><input type='text' name='name1' id="name1" value="<%= name %>" required autofocus placeholder='Product name' minlength="3"></td>	
+			<td><input type='text' name='price1' value="<%= price %>" required placeholder='Price'></td>	
+			<td><input type='text' name='description1' value="<%= description %>" required placeholder='Example: Compact Laptop with excellent multimedia features'></td>
+			<td><input type='text' name='color1' value="<%= color %>" required placeholder='Specify the product color'></td>
+			<td><input type='text' name='category1' value="<%= category %>" required placeholder='Example: Laptop'></td>
+			<td><input type='text' name='brand1' value="<%= brand %>" required placeholder='Example: Dell'></td>
+			<td><select type='text' name='product_status1' value="<%= product_status %>" required>
+				<option value="">--Select Product status--</option>
+				<option value="available" selected>available</option>
+				<option value="not available">not available</option>
+				<option value="new">new</option>
+				<option value="refurbished">refurbished</option>
+				<option value="sale">sale</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><input type='text' name='name2' id="name2" value="<%= name %>" required autofocus placeholder='Product name' minlength="3"></td>	
+			<td><input type='text' name='price2' value="<%= price %>" required placeholder='Price'></td>	
+			<td><input type='text' name='description2' value="<%= description %>" required placeholder='Example: Compact Laptop with excellent multimedia features'></td>
+			<td><input type='text' name='color2' value="<%= color %>" required placeholder='Specify the product color'></td>
+			<td><input type='text' name='category2' value="<%= category %>" required placeholder='Example: Laptop'></td>
+			<td><input type='text' name='brand2' value="<%= brand %>" required placeholder='Example: Dell'></td>
+			<td><select type='text' name='product_status2' value="<%= product_status %>" required>
+				<option value="">--Select Product status--</option>
+				<option value="available" selected>available</option>
+				<option value="not available">not available</option>
+				<option value="new">new</option>
+				<option value="refurbished">refurbished</option>
+				<option value="sale">sale</option>
+				</select>
+			</td>				
+		</tr>
+		<tr>
+			<td><input type='text' name='name3' id="name3" value="<%= name %>" required autofocus placeholder='Product name' minlength="3"></td>	
+			<td><input type='text' name='price3' value="<%= price %>" required placeholder='Price'></td>	
+			<td><input type='text' name='description3' value="<%= description %>" required placeholder='Example: Compact Laptop with excellent multimedia features'></td>
+			<td><input type='text' name='color3' value="<%= color %>" required placeholder='Specify the product color'></td>
+			<td><input type='text' name='category3' value="<%= category %>" required placeholder='Example: Laptop'></td>
+			<td><input type='text' name='brand3' value="<%= brand %>" required placeholder='Example: Dell'></td>
+			<td><select type='text' name='product_status3' value="<%= product_status %>" required>
+				<option value="">--Select Product status--</option>
+				<option value="available" selected>available</option>
+				<option value="not available">not available</option>
+				<option value="new">new</option>
+				<option value="refurbished">refurbished</option>
+				<option value="sale">sale</option>
+				</select>
+			</td>				
+		</tr>
+		<tr>
+			<td><input type='text' name='name4' id="name4" value="<%= name %>" required autofocus placeholder='Product name' minlength="3"></td>	
+			<td><input type='text' name='price4' value="<%= price %>" required placeholder='Price'></td>	
+			<td><input type='text' name='description4' value="<%= description %>" required placeholder='Example: Compact Laptop with excellent multimedia features'></td>
+			<td><input type='text' name='color4' value="<%= color %>" required placeholder='Specify the product color'></td>
+			<td><input type='text' name='category4' value="<%= category %>" required placeholder='Example: Laptop'></td>
+			<td><input type='text' name='brand4' value="<%= brand %>" required placeholder='Example: Dell'></td>
+			<td><select type='text' name='product_status4' value="<%= product_status %>" required>
+				<option value="">--Select Product status--</option>
+				<option value="available" selected>available</option>
+				<option value="not available">not available</option>
+				<option value="new">new</option>
+				<option value="refurbished">refurbished</option>
+				<option value="sale">sale</option>
+				</select>
+			</td>				
+		</tr>
+		<tr>
+			<td><input type='text' name='name5' id="name5" value="<%= name %>" required autofocus placeholder='Product name' minlength="3"></td>	
+			<td><input type='text' name='price5' value="<%= price %>" required placeholder='Price'></td>	
+			<td><input type='text' name='description5' value="<%= description %>" required placeholder='Example: Compact Laptop with excellent multimedia features'></td>
+			<td><input type='text' name='color5' value="<%= color %>" required placeholder='Specify the product color'></td>
+			<td><input type='text' name='category5' value="<%= category %>" required placeholder='Example: Laptop'></td>
+			<td><input type='text' name='brand5' value="<%= brand %>" required placeholder='Example: Dell'></td>
+			<td><select type='text' name='product_status5' value="<%= product_status %>" required>
+				<option value="">--Select Product status--</option>
+				<option value="available" selected>available</option>
+				<option value="not available">not available</option>
+				<option value="new">new</option>
+				<option value="refurbished">refurbished</option>
+				<option value="sale">sale</option>
+				</select>
+			</td>		
+			</tr>
+			<tr>
+			<td>
+			</td>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>
+					<input type="submit" name="Submit" value="      Add      " style='margin-right:-50%;'>
+				</th>
+		</tr>
+	</table>
+</form>
+<!-- including footer content which is common for all pages -->
+<%- include ../layouts/footer.ejs %>	

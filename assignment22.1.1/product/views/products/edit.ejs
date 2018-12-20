@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit product</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h4><a href="/products">Product List</a></h4>
+      <h4>Edit product</h4>
+      <form action="/products/update/<%= product._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" value="<%= product.name %>"></td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td><input type="number" name="price" value="<%= product.price %>"></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><input type="text" name="description" value="<%= product.description %>"></td>
+            </tr>
+            <tr>
+              <td>Color</td>
+              <td><input type="string" name="color" value="<%= product.color %>"></td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td><input type="string" name="category" value="<%= product.category %>"></td>
+              </tr>
+              <tr>
+                  <td>Brand</td>
+                  <td><input type="string" name="brand" value="<%= product.brand %>"></td>
+                </tr>
+            <tr>
+            <tr>
+                <td>Product status</td>
+                <td><input type="string" name="product_status" value="<%= product.product_status %>"></td>
+            </tr>
+              <td><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <span><h4><a href="/products">Product list</a> | <a href="/products/edit/<%= product._id%>">Edit</a></h4></span>
+      <h4>Product detail</h4>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name    :</td>
+            <td><%= product.name %></td>
+          </tr>
+          <tr>
+            <td>Price   :</td>
+            <td><%= product.price %></td>
+          </tr>
+          <tr>
+            <td>Description   :</td>
+            <td><%= product.description %></td>
+          </tr>
+          <tr>
+            <td>Color   :</td>
+            <td><%= product.color %></td>
+          </tr>
+          <tr>
+              <td>Category    :</td>
+              <td><%= product.category %></td>
+            </tr>
+            <tr>
+                <td>Brand   :</td>
+                <td><%= product.brand %></td>
+              </tr>
+              <tr>
+                  <td>Product status    :</td>
+                  <td><%= product.product_status %></td>
+                </tr>
+        </tbody>
+      </table>      
+      <form action="/products/delete/<%= product._id%>" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  </body>
+</html>

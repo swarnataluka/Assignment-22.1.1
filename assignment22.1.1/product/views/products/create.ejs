@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+<!--Create product form page-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create product</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+  </head>
+  <body>
+    <div class="container">
+      <h4><a href="/products">Product List</a></h4>
+      <h4>Create new product</h4>
+      <form action="/products/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" id="name" required autofocus placeholder='Product name' minlength="3" size="35"></td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td><input type="number" name="price" required size="35"></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><input type="text" name="description" required size="35"></td>
+            </tr>
+            <tr>
+              <td>Color</td>
+              <td><input type="text" name="color" required size="35"></td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td><input type="text" name="category" required size="35"></td>
+              </tr>
+              <tr>
+                  <td>Brand</td>
+                  <td><input type="text" name="brand" required size="35"></td>
+                </tr>
+                <tr>
+                    <td>Product status</td>
+                    <td><select type='text' name='product_status' required>
+                        <option value="">--Select Product status--</option>
+                        <option value="available" selected>available</option>
+                        <option value="not available">not available</option>
+                        <option value="new">new</option>
+                        <option value="refurbished">refurbished</option>
+                        <option value="sale">sale</option>
+                        </select></td>
+                  </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Save"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
