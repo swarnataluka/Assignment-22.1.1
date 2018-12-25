@@ -19,6 +19,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["express","mongo-db"],
-  "author": "Bethapudi Ramesh Babu",
+  "author": "Thaluka Swarna Latha",
   "license": "ISC"
 }
