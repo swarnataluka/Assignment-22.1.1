@@ -15,6 +15,6 @@
 	"mongoose": "~5.1.7"
   },
   "keywords": ["express","mongoose", "node.js", "mongodb"],
-  "author": "Bethapudi Ramesh Babu",
+  "author": "Thaluka Swarna Latha",
   "license": "ISC"
 }
